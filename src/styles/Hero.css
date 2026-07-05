@@ -1,0 +1,371 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 8%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #09090f, #141c34, #09090f);
+}
+
+/* Overlay */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 77, 136, 0.15),
+    transparent 45%
+  );
+  pointer-events: none;
+}
+
+/* LEFT */
+
+.hero-left {
+  width: 52%;
+  z-index: 2;
+}
+
+.hero-left h3 {
+  color: #ff77a9;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.hero-left h1 {
+  font-size: 65px;
+  line-height: 1.2;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.quote-box {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.quote-box p {
+  font-size: 26px;
+  color: #ffd6e5;
+  transition: 0.5s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hide {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.subtitle {
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+.hero button {
+  margin-top: 35px;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 50px;
+  background: #ff4d88;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.hero button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px #ff4d88;
+}
+
+/* RIGHT */
+
+.hero-right {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Glow */
+
+.circle {
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 77, 136, 0.22),
+    transparent 70%
+  );
+  filter: blur(45px);
+  animation: pulse 5s infinite;
+}
+
+/* IMAGE */
+
+.hero-right img {
+  width: 420px;
+  max-width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+
+  background: transparent !important;
+
+  border: none !important;
+
+  border-radius: 0 !important;
+
+  box-shadow: none !important;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* Animation */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Floating Hearts */
+
+.heart {
+  position: absolute;
+
+  font-size: 30px;
+
+  opacity: 0.6;
+
+  animation: float 6s infinite;
+}
+
+.h1 {
+  top: 10%;
+  left: 10%;
+}
+
+.h2 {
+  top: 25%;
+  right: 15%;
+}
+
+.h3 {
+  bottom: 20%;
+  left: 20%;
+}
+
+.h4 {
+  bottom: 10%;
+  right: 8%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column-reverse;
+
+    text-align: center;
+
+    padding: 100px 40px 60px;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-right {
+    margin-bottom: 40px;
+  }
+
+  .hero-left h1 {
+    font-size: 48px;
+  }
+
+  .hero-left h3 {
+    font-size: 22px;
+  }
+
+  .quote-box {
+    justify-content: center;
+  }
+
+  .quote-box p {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .hero-right img {
+    width: 340px;
+
+    height: auto;
+  }
+
+  .circle {
+    width: 330px;
+
+    height: 330px;
+  }
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 90px 20px 50px;
+  }
+
+  .hero-left h3 {
+    font-size: 18px;
+  }
+
+  .hero-left h1 {
+    font-size: 34px;
+  }
+
+  .quote-box {
+    min-height: 55px;
+
+    justify-content: center;
+  }
+
+  .quote-box p {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .hero button {
+    width: 100%;
+
+    max-width: 320px;
+
+    padding: 15px;
+
+    font-size: 16px;
+  }
+
+  .hero-right {
+    margin-bottom: 30px;
+  }
+
+  .hero-right img {
+    width: 280px;
+
+    height: auto;
+  }
+
+  .circle {
+    width: 270px;
+
+    height: 270px;
+  }
+
+  .heart {
+    font-size: 22px;
+  }
+}
+
+/* ========================= */
+/* Small Phones */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 15px 40px;
+  }
+
+  .hero-left h3 {
+    font-size: 16px;
+  }
+
+  .hero-left h1 {
+    font-size: 28px;
+  }
+
+  .quote-box p {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+  .hero-right {
+    margin-bottom: 25px;
+  }
+
+  .hero-right img {
+    width: 230px;
+
+    height: auto;
+  }
+
+  .circle {
+    width: 220px;
+
+    height: 220px;
+  }
+
+  .heart {
+    font-size: 18px;
+  }
+
+  .h2,
+  .h3 {
+    display: none;
+  }
+}

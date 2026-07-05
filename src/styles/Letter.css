@@ -1,0 +1,46 @@
+.letter-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #09090f, #151b33);
+}
+
+.letter-card {
+  max-width: 850px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  padding: 50px;
+  color: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.letter-card h1 {
+  text-align: center;
+  color: #ff4d6d;
+  margin-bottom: 30px;
+  font-size: 42px;
+}
+
+.letter-card p {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+  .letter-card {
+    padding: 30px;
+  }
+
+  .letter-card h1 {
+    font-size: 30px;
+  }
+
+  .letter-card p {
+    font-size: 16px;
+  }
+}

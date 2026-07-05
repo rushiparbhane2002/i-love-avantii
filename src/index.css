@@ -1,13 +1,117 @@
-body {
+/* Google Font */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+
+  background: linear-gradient(135deg, #09090f, #101726, #171033, #09090f);
+
+  background-size: 300% 300%;
+
+  animation: bgAnimation 18s ease infinite;
+
+  color: white;
+
+  overflow-x: hidden;
+}
+
+/* Beautiful Animated Background */
+
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff4d88;
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff77a9;
+}
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+
+  max-width: 100%;
+}
+
+section {
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* Selection */
+
+::selection {
+  background: #ff4d88;
+
+  color: white;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  section {
+    padding: 90px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 70px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 60px 15px;
+  }
 }

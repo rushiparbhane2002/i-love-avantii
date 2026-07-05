@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import PhotoSlider from "./components/PhotoSlider";
+import LoveReasons from "./components/LoveReasons";
+import Timeline from "./components/Timeline";
+import Letter from "./components/Letter";
+import Countdown from "./components/Countdown";
+import Footer from "./components/Footer";
+// import CursorGlow from "./components/CursorGlow";
+import RosePetals from "./components/RosePetals";
+// import Loader from "./components/Loader";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Loader /> */}
+
+      <div className="App">
+        {/* <CursorGlow /> */}
+        <RosePetals />
+
+        <Navbar />
+
+        <Hero />
+
+        <PhotoSlider />
+        <LoveReasons />
+        <Timeline />
+        <Letter />
+        <Countdown />
+        <Footer />
+      </div>
+    </>
   );
 }
 

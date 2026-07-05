@@ -22,23 +22,17 @@ function PhotoSlider() {
 
       <Swiper
         modules={[Autoplay]}
-        centeredSlides={true}
         loop={true}
-        spaceBetween={20}
         speed={900}
+        centeredSlides={false}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
         breakpoints={{
           0: {
-            slidesPerView: 1.1,
-            spaceBetween: 15,
-          },
-
-          480: {
-            slidesPerView: 1.2,
-            spaceBetween: 18,
+            slidesPerView: 1,
+            spaceBetween: 0,
           },
 
           768: {

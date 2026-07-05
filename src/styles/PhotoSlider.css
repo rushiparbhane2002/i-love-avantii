@@ -10,15 +10,15 @@
   color: #ff4d88;
   margin-bottom: 60px;
   font-weight: 700;
-  letter-spacing: 1px;
 }
 
-.swiper {
+.gallery-section .swiper {
   width: 100%;
-  padding-bottom: 60px;
+  overflow: hidden;
+  padding-bottom: 50px;
 }
 
-.swiper-slide {
+.gallery-section .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,105 +26,95 @@
 
 .photo-card {
   width: 100%;
-  border-radius: 28px;
+  max-width: 380px;
+  aspect-ratio: 9 / 16;
   overflow: hidden;
+  border-radius: 28px;
   background: #161623;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
-  transition: all 0.45s ease;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  transition: 0.4s;
 }
 
 .photo-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 0 35px rgba(255, 77, 136, 0.45);
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(255, 77, 136, 0.5);
 }
 
 .photo-card img {
   width: 100%;
-  height: 620px;
+  height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.5s ease;
+  transition: 0.5s;
 }
 
 .photo-card:hover img {
   transform: scale(1.05);
 }
 
-/* ========================= */
-/* TABLET */
-/* ========================= */
+/* ================= TABLET ================= */
 
 @media (max-width: 992px) {
   .gallery-section {
-    padding: 90px 30px;
+    padding: 90px 25px;
   }
 
   .gallery-section h1 {
     font-size: 42px;
-    margin-bottom: 45px;
-  }
-
-  .photo-card img {
-    height: 500px;
-  }
-}
-
-/* ========================= */
-/* MOBILE */
-/* ========================= */
-
-@media (max-width: 768px) {
-  .gallery-section {
-    padding: 70px 15px;
-  }
-
-  .gallery-section h1 {
-    font-size: 32px;
-    margin-bottom: 35px;
-  }
-
-  .swiper {
-    padding-bottom: 40px;
-  }
-
-  .swiper-slide {
-    width: 85% !important;
   }
 
   .photo-card {
+    max-width: 320px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 70px 18px;
+  }
+
+  .gallery-section h1 {
+    font-size: 34px;
+    margin-bottom: 35px;
+  }
+
+  .gallery-section .swiper {
+    overflow: hidden;
+  }
+
+  .gallery-section .swiper-slide {
+    width: 100% !important;
+  }
+
+  .photo-card {
+    width: 100%;
+    max-width: 330px;
+    margin: auto;
+    aspect-ratio: 9/16;
     border-radius: 22px;
   }
 
   .photo-card img {
-    height: 430px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 }
 
-/* ========================= */
-/* SMALL MOBILE */
-/* ========================= */
+/* ================= SMALL MOBILE ================= */
 
 @media (max-width: 480px) {
   .gallery-section {
-    padding: 60px 12px;
+    padding: 60px 15px;
   }
 
   .gallery-section h1 {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
-
-  .swiper-slide {
-    width: 90% !important;
+    font-size: 30px;
   }
 
   .photo-card {
-    border-radius: 20px;
-  }
-
-  .photo-card img {
-    height: 360px;
-    object-fit: cover;
+    max-width: 300px;
   }
 }
